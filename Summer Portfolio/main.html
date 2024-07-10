@@ -44,17 +44,17 @@
                 <div class="about-col-2">
                     <h1 class="sub-title">About Me</h1>
                     <p>
-                        I am Kalani Harris. I was born in December, 5th, 2009 in Richmond CA.
+                     I was born in December, 5th, 2009 in Richmond CA. I'm an nice, easygoing,  guy
                     </p>
 
                     <div class="tab-titles">
-                        <p class="tab-links active-link">Skills</p>
-                        <p class="tab-links">Experiance</p>
-                        <p class="tab-links">Education</p>
+                        <p class="tab-links active-link" onclick="OpenTab('skills')">Skills</p>
+                        <p class="tab-links" onclick="OpenTab('exp')">Experiance</p>
+                        <p class="tab-links" onclick="OpenTab('edu')">Education</p>
                     </div>
 
                     <!-------SKILLS------------>
-                    <div class="tab-contents">
+                    <div class="tab-contents active-tab" id="skills">
                         <ul>
                             <li><span>Hard Thinker</span><br>Locked-In/Task Focused</li>
                             <li><span>Gamer Specialist</span><br>Goal Reacher</li>
@@ -63,7 +63,7 @@
                     </div>
 
                     <!-------EXPERIANCE------------>
-                        <div class="tab-contents">
+                        <div class="tab-contents" id="exp">
                             <ul>
                                 <li><span>XP 1</span><br>Visiting Technology Programs</li>
                                 <li><span>XP 2</span><br>HTML/CSS Website</li>
@@ -72,7 +72,7 @@
                             </div>
 
                             <!-------EDUCATION------------>
-                                <div class="tab-contents">
+                                <div class="tab-contents" id="edu">
                                     <ul>
                                         <li><span>EDU 1</span><br>Hidden Genius Program</li>
                                         <li><span>EDU 2</span><br>YouTube</li>
@@ -84,5 +84,29 @@
         </div>
     </div>
     <!------- ABOUT SECTION END------------->
+
+    <script>
+        /* Variable - A name and a type of a stored value */
+
+        /* A variable called tablinks that holds the tags with class 'tab-links'*/
+        var tablinks = document.getElementsByClassName("tab-links");
+
+        /* A variable called tabcontent that holds the tags with class 'tab-contents' */
+        var tablinks = document.getElementsByClassName("tab-contents");
+
+        function OpenTab(tabName)
+        {
+            for (tabLink in tabLinks){
+                
+                tabLink.classList.remove("active-link");
+            }
+
+            event.currentTarget.classList.add("active-link")
+
+
+            document.getElementByID(tabName).classList.add("active-tab");
+        }
+    </script>
+
 </body>
 </html>
