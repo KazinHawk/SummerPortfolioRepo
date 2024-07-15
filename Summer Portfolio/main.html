@@ -5,86 +5,124 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kalani's Professional Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/8897a79353.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <h1>My Portfolio</h1>
-<!-----------------HEADER SECTION--------------->
-<div id="header">
-       
-    <div id="about"></div>
-        <div id="container">
+
+    <!-- HEADER SECTION -->
+    <div id="header">
+        <div class="container">
             <nav>
-                <img src="images/THGP_Logo.png"class="logo" alt="THGP Logo">
+                <img src="images/THGP_Logo.png" class="logo" alt="THGP Logo">
                 <ul>
                     <li><a href="#">Home</a></li>
                     <li><a href="#">About</a></li>
                     <li><a href="#">Services</a></li>
                     <li><a href="#">Portfolios</a></li>
                     <li><a href="#">Contact</a></li>
-
                 </ul>
             </nav>
             <div class="header-text">
                 <p>Game Creator</p>
                 <h1>Hello, I'm <span>Kalani "Kazin" Harris</span><br>from Richmond, CA</h1>
             </div>
+        </div>
     </div>
-</div>
-<!------- END HEADER SECTION ------------->
+    <!-- END HEADER SECTION -->
 
-<!------- ABOUT SECTION ------------->
+    <!-- ABOUT SECTION -->
     <div id="about">
         <div class="container">
             <div class="row">
-
                 <div class="about-col-1">
                     <img src="images/IMG_7239.jpg" alt="me">
                 </div>
-    
                 <div class="about-col-2">
                     <h1 class="sub-title">About Me</h1>
-                    <p>
-                     I was born in December, 5th, 2009 in Richmond CA. I'm an nice, easygoing,  guy
-                    </p>
+                    <p>I was born in December, 5th, 2009 in Richmond CA. I'm an nice, easygoing,  guy</p>
 
                     <div class="tab-titles">
                         <p class="tab-links active-link" onclick="OpenTab('skills')">Skills</p>
-                        <p class="tab-links" onclick="OpenTab('exp')">Experiance</p>
+                        <p class="tab-links" onclick="OpenTab('exp')">Experience</p>
                         <p class="tab-links" onclick="OpenTab('edu')">Education</p>
                     </div>
 
-                    <!-------SKILLS------------>
+                    <!-- SKILLS -->
                     <div class="tab-contents active-tab" id="skills">
                         <ul>
                             <li><span>Hard Thinker</span><br>Locked-In/Task Focused</li>
                             <li><span>Gamer Specialist</span><br>Goal Reacher</li>
-                            <li><span>Communitive</span><br>Friendly</li>
+                            <li><span>Communicative</span><br>Friendly</li>
                         </ul>
                     </div>
 
-                    <!-------EXPERIANCE------------>
-                        <div class="tab-contents" id="exp">
-                            <ul>
-                                <li><span>XP 1</span><br>Visiting Technology Programs</li>
-                                <li><span>XP 2</span><br>HTML/CSS Website</li>
-                                <li><span>XP 3</span><br>Coding</li>
-                                </ul>
-                            </div>
+                    <!-- EXPERIENCE -->
+                    <div class="tab-contents" id="exp">
+                        <ul>
+                            <li><span>XP 1</span><br>Visiting Technology Programs</li>
+                            <li><span>XP 2</span><br>HTML/CSS Website</li>
+                            <li><span>XP 3</span><br>Coding</li>
+                        </ul>
+                    </div>
 
-                            <!-------EDUCATION------------>
-                                <div class="tab-contents" id="edu">
-                                    <ul>
-                                        <li><span>EDU 1</span><br>Hidden Genius Program</li>
-                                        <li><span>EDU 2</span><br>YouTube</li>
-                                        <li><span>EDU 3</span><br>School</li>
+                    <!-- EDUCATION -->
+                    <div class="tab-contents" id="edu">
+                        <ul>
+                            <li><span>EDU 1</span><br>Hidden Genius Program</li>
+                            <li><span>EDU 2</span><br>YouTube</li>
+                            <li><span>EDU 3</span><br>School</li>
+                        </ul>
                     </div>
 
                 </div>
             </div>
         </div>
     </div>
-    <!------- ABOUT SECTION END------------->
+    <!-- ABOUT SECTION END -->
 
+    <!-- SERVICES SECTION -->
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-gamepad"></i>
+                    <h2>Gamer 1 paragraph</h2>
+                    <p>Services 1 paragraph</p>
+                    <a href="#">learn more</a>
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-microchip"></i>
+                    <h2>Coder 2 paragraph</h2>
+                    <p>Services 2 paragraph</p>
+                    <a href="#">learn more</a>
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-crosshairs"></i>
+                    <h2>Designer 3 paragraph</h2>
+                    <p>Services 3 paragraph</p>
+                    <a href="#">learn more</a>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    
+        <!--SERVICES SECTION END-->
+
+        <!-------PORTFOLIO-------->
+        <div id="portfolio">
+            <div class="container">
+                <h1 class="sub-title">My Work</h1>
+            </div>
+        </div>
+    <!-- SCRIPT SECTION -->
     <script>
         /* Variable - A name and a type of a stored value */
 
@@ -92,19 +130,19 @@
         var tablinks = document.getElementsByClassName("tab-links");
 
         /* A variable called tabcontent that holds the tags with class 'tab-contents' */
-        var tablinks = document.getElementsByClassName("tab-contents");
+        var tabContents = document.getElementsByClassName("tab-contents");
 
-        function OpenTab(tabName)
-        {
-            for (tabLink in tabLinks){
-                
+        function OpenTab(tabName) {
+            for (tabLink of tablinks) {
                 tabLink.classList.remove("active-link");
             }
 
+            for (cont of tabContents) {
+                cont.classList.remove("active-tab")
+            }
+
             event.currentTarget.classList.add("active-link")
-
-
-            document.getElementByID(tabName).classList.add("active-tab");
+            document.getElementById(tabName).classList.add("active-tab");
         }
     </script>
 
