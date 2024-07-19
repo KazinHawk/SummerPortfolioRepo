@@ -262,3 +262,38 @@ transform: translateY(-10);
     background-color:rgb(74, 68, 255);
     
 }
+
+/*-----CONTACT------*/
+.contact-left{
+    flex-basis: 35%;
+}
+
+.contact-right{
+    flex-basis: 60%;
+}
+.contact-left p i{
+    margin-top: 30px;
+    font-family:'Times New Roman', Times, serif
+}
+
+.contact-left p i{
+    color:#3c00ff;
+    margin-right: 15px;
+    font-size: 25px;
+}
+
+.social-icons{
+    margin-top: 30px;
+}
+
+.social icons a{
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color:#3c00ff
+    display: inline-block;
+}
+.social-icons a:hover{
+    color: #3c00ff;
+    transform: TranslateY(-5px);
+}
